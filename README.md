@@ -1,5 +1,7 @@
 This is a bot built to assist egghead admins with new instructors.
 
+This is a test changing the README.
+
 ## User Joins
 
 When a user joins slack, we need to associate their Slack id with the instructor account. Generally this means a simple lookup via email address, but sometimes the email doesn't match. In this case, we want to make a "best guess" and ask the user for confirmation in a DM.
