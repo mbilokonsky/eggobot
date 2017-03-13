@@ -1,6 +1,7 @@
 # Summary of Changes
 Here's a summary of the work done so far by Data Obscura.
   - complete refactor of codebase. index.js now sets stuff up, but egghead api integration is in the `api/` folder, bot behavior is in the `behavior/` folder and there's some general stuff in `utils/`.
+  - an experimental `commandParser` exists in utils, which can be used to turn a direct mention into a command with structure {name, args} where name is the first token in the string and args is an array of the following ones in order. Any tokens wrapped in double-quotes can combined into a single arg. This enables you to do something like `@eggo say "I love egghead" to @joel` and it results in `{name: 'say', args: ["say", "I love egghead", "to", "<joelID>"]}`. Right now this is invoked by each behavior that cares about commands, but we can probably stick it into a middleware.
   - We've pulled out HAPI for now at least, since botkit ships with its own server for webhooks and slash commands. 
   - Features are added as new folders in the `behavior/` folder. Each feature should have an `index.js` which exports a function which takes a controller. 
   - Greeting logic extracted from index.js and placed into `behavior/greeting`
