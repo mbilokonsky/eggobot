@@ -1,3 +1,14 @@
+# Summary of Changes
+Here's a summary of the work done so far by Data Obscura.
+  - complete refactor of codebase. index.js now sets stuff up, but egghead api integration is in the `api/` folder, bot behavior is in the `behavior/` folder and there's some general stuff in `utils/`.
+  - We've pulled out HAPI for now at least, since botkit ships with its own server for webhooks and slash commands. 
+  - Features are added as new folders in the `behavior/` folder. Each feature should have an `index.js` which exports a function which takes a controller. 
+  - Greeting logic extracted from index.js and placed into `behavior/greeting`
+  - Fedex integration implemented in `behavior/fedex`
+  - Email Confirmation integration is in `behavior/email_confirmation`
+
+There are still some unresolved TODOs here, notably around interfacing with egghead API and around workflow design in the email_confirmation branch. I estimate another two hours of work once questions have been answered will be sufficient to close out this sprint.
+
 This is a bot built to assist egghead admins with new instructors.
 
 ## User Joins
@@ -45,3 +56,4 @@ Start Redis now:
 ```
 launchctl load ~/Library/LaunchAgents/homebrew.mxcl.redis.plist
 ```
+
