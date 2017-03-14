@@ -21,7 +21,8 @@ app.get('/instructors', function(req, res) {
             is_restricted: false,
             is_ultra_restricted: false,
             is_bot: false 
-        };
+        }
+    };
 
     if (req.query.name){
         res.send(user);
@@ -31,7 +32,7 @@ app.get('/instructors', function(req, res) {
 })
 
 app.put('/instructors/:slug', function(req, res) { 
-    res.send('ok'); 
+    res.send('Adding data to an instructor account'); 
 })
 
 app.listen(4000, function() { 
