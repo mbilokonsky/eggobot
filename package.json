@@ -6,7 +6,7 @@
   "scripts": {
     "start": "nodemon lib/index.js",
     "build": "babel lib -d dist",
-    "deploy": "heroku push origin master"
+    "deploy": "git push heroku master"
   },
   "author": "joelhooks <joelhooks@gmail.com>",
   "license": "ISC",
