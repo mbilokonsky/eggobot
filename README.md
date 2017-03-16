@@ -31,7 +31,7 @@ See `lib/behavior/slash_commands` to see how our two commands, `/slug` and `/fed
 
 # Technical stuff
 
-In order to use slash commands and interactive messages, this app has grown in complexity. It's no longer a slack 'custom integration', instead it's a full 'slack app'. This means you have to go into the slack API for your team and create an app to get the full credentials. It also means that you're limited in terms of what you can do with local development - slack apps must live on a publicly accessible server. I've been using heroku to deploy and test most of this.
+In order to use slash commands and interactive messages, this app has grown in complexity. It's no longer a slack 'custom integration', instead it's a full 'slack app'. This means you have to go into the slack API for your team and create an app to get the full credentials. It also means that you're limited in terms of what you can do with local development - slack apps must live on a publicly accessible server. I've been using heroku to deploy and test most of this. There is a mock server here, but given the heroku constraints I've not been using it - I've just been letting my real API server requests fail with permission errors, so the final parts of these operations will still have to be tested.
 
 Create a `.env` file in the root of the project (see `.env.template`). Note that ADMIN_CHANNEL is the id, not the name, of the admin channel you want to use.
 
