@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon lib/index.js",
-    "build": "babel lib -d dist"
+    "build": "babel lib -d dist",
+    "deploy": "heroku push origin master"
   },
   "author": "joelhooks <joelhooks@gmail.com>",
   "license": "ISC",
